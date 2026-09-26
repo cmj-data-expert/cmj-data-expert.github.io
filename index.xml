@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Sep 2026 01:17:50 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 01:20:19 +0900</lastBuildDate>
     <atom:link href="https://cmj-data-expert.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hi</title>
+      <link>https://cmj-data-expert.github.io/posts/hi/</link>
+      <pubDate>Sun, 27 Sep 2026 01:20:19 +0900</pubDate>
+      <guid>https://cmj-data-expert.github.io/posts/hi/</guid>
+      <description>&lt;p&gt;안녕하세요.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hello</title>
       <link>https://cmj-data-expert.github.io/hello/</link>
