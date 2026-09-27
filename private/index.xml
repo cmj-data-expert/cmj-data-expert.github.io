@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>techblog</title>
-    <link>https://cmj-data-expert.github.io/</link>
-    <description>Recent content on techblog</description>
+    <title>Privates on techblog</title>
+    <link>https://cmj-data-expert.github.io/private/</link>
+    <description>Recent content in Privates on techblog</description>
     <image>
       <title>techblog</title>
       <url>https://cmj-data-expert.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -12,21 +12,7 @@
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 27 Sep 2026 01:20:19 +0900</lastBuildDate>
-    <atom:link href="https://cmj-data-expert.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hi</title>
-      <link>https://cmj-data-expert.github.io/posts/hi/</link>
-      <pubDate>Sun, 27 Sep 2026 01:20:19 +0900</pubDate>
-      <guid>https://cmj-data-expert.github.io/posts/hi/</guid>
-      <description>&lt;p&gt;안녕하세요.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hi</title>
-      <link>https://cmj-data-expert.github.io/posts/hi2/</link>
-      <pubDate>Sun, 27 Sep 2026 01:20:19 +0900</pubDate>
-      <guid>https://cmj-data-expert.github.io/posts/hi2/</guid>
-      <description>&lt;p&gt;어서오세요.&lt;/p&gt;</description>
-    </item>
+    <atom:link href="https://cmj-data-expert.github.io/private/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hi</title>
       <link>https://cmj-data-expert.github.io/private/hi/</link>
