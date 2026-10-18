@@ -11,14 +11,59 @@
     </image>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Sep 2026 01:20:19 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 10:04:19 +0900</lastBuildDate>
     <atom:link href="https://cmj-data-expert.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hi</title>
-      <link>https://cmj-data-expert.github.io/posts/hi/</link>
-      <pubDate>Sun, 27 Sep 2026 01:20:19 +0900</pubDate>
-      <guid>https://cmj-data-expert.github.io/posts/hi/</guid>
-      <description>&lt;p&gt;안녕하세요.&lt;/p&gt;</description>
+      <title>T-SQL for Comparing Backup and Original Table Structures</title>
+      <link>https://cmj-data-expert.github.io/posts/table_structure_compare/</link>
+      <pubDate>Sun, 18 Oct 2026 10:04:19 +0900</pubDate>
+      <guid>https://cmj-data-expert.github.io/posts/table_structure_compare/</guid>
+      <description>&lt;h1 id=&#34;테이블-구조-비교-스크립트-원천-vs-백업&#34;&gt;테이블 구조 비교 스크립트 (원천 vs 백업)&lt;/h1&gt;
+&lt;h2 id=&#34;1-개요&#34;&gt;1. 개요&lt;/h2&gt;
+&lt;p&gt;같은 스키마 안에 있는 &lt;strong&gt;원천 테이블&lt;/strong&gt;과 그 &lt;strong&gt;백업 테이블(&lt;code&gt;_BU&lt;/code&gt; 접미사)&lt;/strong&gt; 의 컬럼 구조를 비교하는 SQL Server 스크립트입니다.
+어떤 테이블의 어떤 컬럼이 어느 항목에서 다른지를 한 번에 확인할 수 있도록 결과를 임시 테이블에 정리합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;대상 DBMS : SQL Server 2017 이상&lt;/li&gt;
+&lt;li&gt;원본 : Oracle 익명 블록 기반 스크립트를 SQL Server용으로 변환·확장한 버전&lt;/li&gt;
+&lt;li&gt;데이터 변경 : 없음 (조회 전용, 모든 작업은 세션 임시 테이블에서만 수행)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-사용-목적&#34;&gt;2. 사용 목적&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;백업 테이블 생성 후 원천과 구조가 동일한지 검증&lt;/li&gt;
+&lt;li&gt;원천 테이블 구조 변경(컬럼 추가·타입 변경 등) 후 백업과의 차이 파악&lt;/li&gt;
+&lt;li&gt;한쪽에만 존재하는 테이블(백업 누락, 불필요한 백업) 식별&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-비교-대상-정의&#34;&gt;3. 비교 대상 정의&lt;/h2&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;구분&lt;/th&gt;
+					&lt;th&gt;대상&lt;/th&gt;
+					&lt;th&gt;식별 방법&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;원천&lt;/td&gt;
+					&lt;td&gt;지정 스키마의 일반 테이블&lt;/td&gt;
+					&lt;td&gt;테이블명이 &lt;code&gt;_BU&lt;/code&gt;로 끝나지 않는 테이블&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;백업&lt;/td&gt;
+					&lt;td&gt;지정 스키마의 백업 테이블&lt;/td&gt;
+					&lt;td&gt;테이블명이 &lt;code&gt;_BU&lt;/code&gt;로 끝나는 테이블&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;매칭&lt;/td&gt;
+					&lt;td&gt;원천 ↔ 백업&lt;/td&gt;
+					&lt;td&gt;백업 테이블명 &lt;strong&gt;끝의&lt;/strong&gt; &lt;code&gt;_BU&lt;/code&gt; 3자리를 제거한 이름 = 원천 테이블명&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;뷰(View)는 비교 대상에서 제외되며, 실제 테이블(BASE TABLE)만 비교합니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hi</title>
